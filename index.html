@@ -259,7 +259,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-11T15:05:13+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-11T16:01:35+08:00">
                 2017-11-11
               </time>
             
@@ -310,8 +310,45 @@
       
         
           
-            <h2 id="Android-Studio-3-0版本开始完全支持kotlin，你可以新建android项目with-kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！"><a href="#Android-Studio-3-0版本开始完全支持kotlin，你可以新建android项目with-kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！" class="headerlink" title="Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！"></a>Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！</h2><p>1.创建新项目with kotlin</p>
+            <p>Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！</p>
+<p>#1.创建新项目with kotlin</p>
 <p>In Android Studio, click File &gt; New &gt; New Project；<br>选中 Include Kotlin support.这个一定不要忘了；一路next，创建完成你的第一个kotlin android项目。</p>
+<p><img src="/2017/11/11/hello-kotlin/create-kotlin-project.png" alt=""></p>
+<p>#2.添加kotlin class到项目中<br>在工程包路径上右键，选择New &gt; Activity &gt; Empty Activity.</p>
+<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-1.png" alt=""></p>
+<p>在接下来的页面，source Language 一定要选择kotlin，点击Finish。</p>
+<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-2.png" alt=""></p>
+<p>#3.项目结构分析</p>
+<p>##a.打开你根目录的build.gradle文件,多了一个classpath这就是开发kotlin android项目必须的插件<br><code>buildscript {
+    ext.kotlin_version = &#39;1.1.51&#39;
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath &#39;com.android.tools.build:gradle:3.0.0&#39;
+        classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;
+    }
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}</code></p>
+<p>##b.打开你创建的主module下的build.gradle文件，多了两行apply，分别是kotlin-android核心库和扩展库。</p>
+<p><code>apply plugin: &#39;kotlin-android&#39;
+apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
+<p>##c.打开MainActivity文件，可以看到和我们之前写的Activity差别并不是很大，只不过有一些符号不太一样，别担心，后续的语法糖会满足你，现在可以运行你的HelloKotlin项目了~</p>
+<p><code>class MainActivity : AppCompatActivity() {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+  }
+}</code></p>
 
           
         
