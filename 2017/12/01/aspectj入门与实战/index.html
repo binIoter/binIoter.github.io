@@ -79,20 +79,16 @@
 
 
 
-<meta name="description" content="Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！ #1.创建新项目with kotlin In Android Studio, click F">
+<meta name="description" content="写在前面在介绍Aspectj之前先要说说AOP，在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello-kotlin">
-<meta property="og:url" content="http://binioter.com/2017/11/11/hello-kotlin/index.html">
+<meta property="og:title" content="aspectj入门与实战">
+<meta property="og:url" content="http://binioter.com/2017/12/01/aspectj入门与实战/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！ #1.创建新项目with kotlin In Android Studio, click F">
-<meta property="og:image" content="http://binioter.com/2017/11/11/hello-kotlin/create-kotlin-project.png">
-<meta property="og:image" content="http://binioter.com/2017/11/11/hello-kotlin/add-kotlin-activity-1.png">
-<meta property="og:image" content="http://binioter.com/2017/11/11/hello-kotlin/add-kotlin-activity-2.png">
-<meta property="og:updated_time" content="2017-11-11T08:57:40.000Z">
+<meta property="og:description" content="写在前面在介绍Aspectj之前先要说说AOP，在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合">
+<meta property="og:updated_time" content="2017-12-01T08:34:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello-kotlin">
-<meta name="twitter:description" content="Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！ #1.创建新项目with kotlin In Android Studio, click F">
-<meta name="twitter:image" content="http://binioter.com/2017/11/11/hello-kotlin/create-kotlin-project.png">
+<meta name="twitter:title" content="aspectj入门与实战">
+<meta name="twitter:description" content="写在前面在介绍Aspectj之前先要说说AOP，在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合">
 
 
 
@@ -122,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://binioter.com/2017/11/11/hello-kotlin/"/>
+  <link rel="canonical" href="http://binioter.com/2017/12/01/aspectj入门与实战/"/>
 
 
 
 
 
-  <title>hello-kotlin | Hexo</title>
+  <title>aspectj入门与实战 | Hexo</title>
   
 
 
@@ -235,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://binioter.com/2017/11/11/hello-kotlin/">
+    <link itemprop="mainEntityOfPage" href="http://binioter.com/2017/12/01/aspectj入门与实战/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -252,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hello-kotlin</h1>
+          <h1 class="post-title" itemprop="name headline">aspectj入门与实战</h1>
         
 
         <div class="post-meta">
@@ -264,8 +260,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-11T16:01:35+08:00">
-                2017-11-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T15:23:39+08:00">
+                2017-12-01
               </time>
             
 
@@ -283,9 +279,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/11/hello-kotlin/#comments" itemprop="discussionUrl">
+                <a href="/2017/12/01/aspectj入门与实战/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/11/hello-kotlin/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/12/01/aspectj入门与实战/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -313,45 +309,15 @@
       
 
       
-        <p>Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！</p>
-<p>#1.创建新项目with kotlin</p>
-<p>In Android Studio, click File &gt; New &gt; New Project；<br>选中 Include Kotlin support.这个一定不要忘了；一路next，创建完成你的第一个kotlin android项目。</p>
-<p><img src="/2017/11/11/hello-kotlin/create-kotlin-project.png" alt=""></p>
-<p>#2.添加kotlin class到项目中<br>在工程包路径上右键，选择New &gt; Activity &gt; Empty Activity.</p>
-<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-1.png" alt=""></p>
-<p>在接下来的页面，source Language 一定要选择kotlin，点击Finish。</p>
-<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-2.png" alt=""></p>
-<p>#3.项目结构分析</p>
-<p>##a.打开你根目录的build.gradle文件,多了一个classpath这就是开发kotlin android项目必须的插件<br><code>buildscript {
-    ext.kotlin_version = &#39;1.1.51&#39;
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath &#39;com.android.tools.build:gradle:3.0.0&#39;
-        classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;
-    }
-}
-allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}</code></p>
-<p>##b.打开你创建的主module下的build.gradle文件，多了两行apply，分别是kotlin-android核心库和扩展库。</p>
-<p><code>apply plugin: &#39;kotlin-android&#39;
-apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
-<p>##c.打开MainActivity文件，可以看到和我们之前写的Activity差别并不是很大，只不过有一些符号不太一样，别担心，后续的语法糖会满足你，现在可以运行你的HelloKotlin项目了~</p>
-<p><code>class MainActivity : AppCompatActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-  }
-}</code></p>
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="在介绍Aspectj之前先要说说AOP，"><a href="#在介绍Aspectj之前先要说说AOP，" class="headerlink" title="在介绍Aspectj之前先要说说AOP，"></a>在介绍Aspectj之前先要说说AOP，</h3><p>在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
+<p>——以上解释来自<a href="https://baike.baidu.com/item/AOP/1332219?fr=aladdin" target="_blank" rel="external">百度百科</a><br>一句话：AOP是一种不改变原有代码，通过动态注入，改变原有代码逻辑与功能的技术</p>
+<h3 id="AspectJ：Android平台上实现AOP技术"><a href="#AspectJ：Android平台上实现AOP技术" class="headerlink" title="AspectJ：Android平台上实现AOP技术"></a>AspectJ：Android平台上实现AOP技术</h3><p>###AspectJ 术语</p>
+<ul>
+<li>Join Point：代码可注入的点，比如一个方法的调用处或者方法内部、“读、写”变量,异常处理等。</li>
+<li>Pointcut：用来描述Join Point注入点的一段表达式，比如：call(public <em> </em>(int)) &amp;&amp; args(i)</li>
+<li>Advice：常见的有 Before、After、Around 等，表示代码执行前、执行后、替换目标代码，也就是在 Pointcut 何处注入代码。</li>
+<li>Aspect：Pointcut 和 Advice 合在一起称作 Aspect。</li>
+</ul>
 
       
     </div>
@@ -376,15 +342,15 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/25/kotlin-vs-java/" rel="next" title="kotlin-vs-java">
+                <i class="fa fa-chevron-left"></i> kotlin-vs-java
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/25/kotlin-vs-java/" rel="prev" title="kotlin-vs-java">
-                kotlin-vs-java <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,8 +412,17 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -491,6 +466,22 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在介绍Aspectj之前先要说说AOP，"><span class="nav-number">1.1.</span> <span class="nav-text">在介绍Aspectj之前先要说说AOP，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AspectJ：Android平台上实现AOP技术"><span class="nav-number">1.2.</span> <span class="nav-text">AspectJ：Android平台上实现AOP技术</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -648,9 +639,9 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://binioter.com/2017/11/11/hello-kotlin/';
-          this.page.identifier = '2017/11/11/hello-kotlin/';
-          this.page.title = 'hello-kotlin';
+          this.page.url = 'http://binioter.com/2017/12/01/aspectj入门与实战/';
+          this.page.identifier = '2017/12/01/aspectj入门与实战/';
+          this.page.title = 'aspectj入门与实战';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';

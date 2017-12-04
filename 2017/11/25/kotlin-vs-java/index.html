@@ -79,12 +79,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://binioter.com/index.html">
+<meta name="description" content="写在前面Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。1.空指针安全in javaif (nullable != null){      nullab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kotlin-vs-java">
+<meta property="og:url" content="http://binioter.com/2017/11/25/kotlin-vs-java/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="写在前面Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。1.空指针安全in javaif (nullable != null){      nullab">
+<meta property="og:updated_time" content="2017-12-04T06:22:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="kotlin-vs-java">
+<meta name="twitter:description" content="写在前面Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。1.空指针安全in javaif (nullable != null){      nullab">
 
 
 
@@ -114,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://binioter.com/"/>
+  <link rel="canonical" href="http://binioter.com/2017/11/25/kotlin-vs-java/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>kotlin-vs-java | Hexo</title>
   
 
 
@@ -139,8 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -213,148 +216,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://binioter.com/2017/12/01/aspectj入门与实战/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/01/aspectj入门与实战/" itemprop="url">aspectj入门与实战</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T15:23:39+08:00">
-                2017-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/12/01/aspectj入门与实战/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/01/aspectj入门与实战/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h3 id="在介绍Aspectj之前先要说说AOP，"><a href="#在介绍Aspectj之前先要说说AOP，" class="headerlink" title="在介绍Aspectj之前先要说说AOP，"></a>在介绍Aspectj之前先要说说AOP，</h3><p>在软件业，AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。</p>
-<p>——以上解释来自<a href="https://baike.baidu.com/item/AOP/1332219?fr=aladdin" target="_blank" rel="external">百度百科</a><br>一句话：AOP是一种不改变原有代码，通过动态注入，改变原有代码逻辑与功能的技术</p>
-<h3 id="AspectJ：Android平台上实现AOP技术"><a href="#AspectJ：Android平台上实现AOP技术" class="headerlink" title="AspectJ：Android平台上实现AOP技术"></a>AspectJ：Android平台上实现AOP技术</h3><p>###AspectJ 术语</p>
-<ul>
-<li>Join Point：代码可注入的点，比如一个方法的调用处或者方法内部、“读、写”变量,异常处理等。</li>
-<li>Pointcut：用来描述Join Point注入点的一段表达式，比如：call(public <em> </em>(int)) &amp;&amp; args(i)</li>
-<li>Advice：常见的有 Before、After、Around 等，表示代码执行前、执行后、替换目标代码，也就是在 Pointcut 何处注入代码。</li>
-<li>Aspect：Pointcut 和 Advice 合在一起称作 Aspect。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -384,9 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/25/kotlin-vs-java/" itemprop="url">kotlin-vs-java</a></h1>
+          <h1 class="post-title" itemprop="name headline">kotlin-vs-java</h1>
         
 
         <div class="post-meta">
@@ -447,9 +309,7 @@
       
 
       
-        
-          
-            <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="Google-IO-2017-Kotlin-成为了-Android-的官方语言-多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。"><a href="#Google-IO-2017-Kotlin-成为了-Android-的官方语言-多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。" class="headerlink" title="Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。"></a>Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。</h2><h2 id="1-空指针安全"><a href="#1-空指针安全" class="headerlink" title="1.空指针安全"></a>1.空指针安全</h2><h3 id="in-java"><a href="#in-java" class="headerlink" title="in java"></a>in java</h3><pre><code>if (nullable != null){ 
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="Google-IO-2017-Kotlin-成为了-Android-的官方语言-多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。"><a href="#Google-IO-2017-Kotlin-成为了-Android-的官方语言-多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。" class="headerlink" title="Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。"></a>Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。</h2><h2 id="1-空指针安全"><a href="#1-空指针安全" class="headerlink" title="1.空指针安全"></a>1.空指针安全</h2><h3 id="in-java"><a href="#in-java" class="headerlink" title="in java"></a>in java</h3><pre><code>if (nullable != null){ 
     nullable.doStuff()
     if(nullable.nullableString!=null){  
         println(nullable.nullableString.substring(0, 2))
@@ -581,8 +441,6 @@ fun useMap(map: MapOfLists) {
     // ...
 }
 </code></pre><h1 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h1><h2 id="kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！"><a href="#kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！" class="headerlink" title="kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！"></a>kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！</h2>
-          
-        
       
     </div>
     
@@ -599,181 +457,32 @@ fun useMap(map: MapOfLists) {
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://binioter.com/2017/11/11/hello-kotlin/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/11/hello-kotlin/" itemprop="url">hello-kotlin</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-11T16:01:35+08:00">
-                2017-11-11
-              </time>
+              <a href="/2017/11/11/hello-kotlin/" rel="next" title="hello-kotlin">
+                <i class="fa fa-chevron-left"></i> hello-kotlin
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2017/12/01/aspectj入门与实战/" rel="prev" title="aspectj入门与实战">
+                aspectj入门与实战 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/11/11/hello-kotlin/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/11/hello-kotlin/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Android Studio 3.0版本开始完全支持kotlin，你可以新建android项目with kotlin，新建kotlin文件或者转换现有java代码为kotlin代码，所有这些你不需要安装任何插件，用kotlin开发android就是这么easy！下面让我们一起开始hello-kotlin！</p>
-<p>#1.创建新项目with kotlin</p>
-<p>In Android Studio, click File &gt; New &gt; New Project；<br>选中 Include Kotlin support.这个一定不要忘了；一路next，创建完成你的第一个kotlin android项目。</p>
-<p><img src="/2017/11/11/hello-kotlin/create-kotlin-project.png" alt=""></p>
-<p>#2.添加kotlin class到项目中<br>在工程包路径上右键，选择New &gt; Activity &gt; Empty Activity.</p>
-<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-1.png" alt=""></p>
-<p>在接下来的页面，source Language 一定要选择kotlin，点击Finish。</p>
-<p><img src="/2017/11/11/hello-kotlin/add-kotlin-activity-2.png" alt=""></p>
-<p>#3.项目结构分析</p>
-<p>##a.打开你根目录的build.gradle文件,多了一个classpath这就是开发kotlin android项目必须的插件<br><code>buildscript {
-    ext.kotlin_version = &#39;1.1.51&#39;
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath &#39;com.android.tools.build:gradle:3.0.0&#39;
-        classpath &quot;org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version&quot;
-    }
-}
-allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}</code></p>
-<p>##b.打开你创建的主module下的build.gradle文件，多了两行apply，分别是kotlin-android核心库和扩展库。</p>
-<p><code>apply plugin: &#39;kotlin-android&#39;
-apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
-<p>##c.打开MainActivity文件，可以看到和我们之前写的Activity差别并不是很大，只不过有一些符号不太一样，别担心，后续的语法糖会满足你，现在可以运行你的HelloKotlin项目了~</p>
-<p><code>class MainActivity : AppCompatActivity() {
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_main)
-  }
-}</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -783,10 +492,11 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -794,6 +504,20 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -814,8 +538,17 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -859,6 +592,22 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-IO-2017-Kotlin-成为了-Android-的官方语言-多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。"><span class="nav-number">1.1.</span> <span class="nav-text">Google IO 2017 Kotlin 成为了 Android 的官方语言,多少Android开发者兴奋不已，但是作为大多数开发者来说，他们都是用Java开发Android的，那么在Kotlin和Java的十字路口到底该如何抉择？Kotlin之于Java又有何过人之处呢？，下面我们一一比较。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-空指针安全"><span class="nav-number">1.2.</span> <span class="nav-text">1.空指针安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java"><span class="nav-number">1.2.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin"><span class="nav-number">1.2.2.</span> <span class="nav-text">in kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有没有很爽？kotlin用？语法来进行空校验，如上面的意思是nullable为空吗？为空就不执行后边的语句，不为空继续执行"><span class="nav-number">1.2.3.</span> <span class="nav-text">有没有很爽？kotlin用？语法来进行空校验，如上面的意思是nullable为空吗？为空就不执行后边的语句，不为空继续执行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-函数扩展"><span class="nav-number">1.3.</span> <span class="nav-text">2.函数扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">in kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展函数可以在已有类中添加新的方法，不会对原类做修改，比继承更灵活"><span class="nav-number">1.3.3.</span> <span class="nav-text">扩展函数可以在已有类中添加新的方法，不会对原类做修改，比继承更灵活</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Lambda-高阶函数，Streams-API-函数式编程支持"><span class="nav-number">1.4.</span> <span class="nav-text">3.Lambda, 高阶函数，Streams API, 函数式编程支持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin-2"><span class="nav-number">1.4.2.</span> <span class="nav-text">in kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda-表达式和高阶函数配合使用，是你的代码更加简洁。（高阶函数：可以接受函数作为参数也可以返回函数作为结果）"><span class="nav-number">1.4.3.</span> <span class="nav-text">Lambda 表达式和高阶函数配合使用，是你的代码更加简洁。（高阶函数：可以接受函数作为参数也可以返回函数作为结果）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-字符串模板"><span class="nav-number">1.5.</span> <span class="nav-text">4.字符串模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java-3"><span class="nav-number">1.5.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin-3"><span class="nav-number">1.5.2.</span> <span class="nav-text">in kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串模板使字符串拼接更简单"><span class="nav-number">1.5.3.</span> <span class="nav-text">字符串模板使字符串拼接更简单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-数据类对象"><span class="nav-number">1.6.</span> <span class="nav-text">5.数据类对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java-4"><span class="nav-number">1.6.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin-4"><span class="nav-number">1.6.2.</span> <span class="nav-text">in kotlin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一行代码与一页代码的区别，还不够简洁吗？"><span class="nav-number">1.6.3.</span> <span class="nav-text">一行代码与一页代码的区别，还不够简洁吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-不可变类型"><span class="nav-number">1.7.</span> <span class="nav-text">6.不可变类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#in-java-5"><span class="nav-number">1.7.1.</span> <span class="nav-text">in java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in-kotlin-5"><span class="nav-number">1.7.2.</span> <span class="nav-text">in kotlin</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-kotlin的协程比handler更方便"><span class="nav-number">1.8.</span> <span class="nav-text">7.kotlin的协程比handler更方便</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-类型别名"><span class="nav-number">1.9.</span> <span class="nav-text">8.类型别名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在后面"><span class="nav-number">2.</span> <span class="nav-text">写在后面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！"><span class="nav-number">2.1.</span> <span class="nav-text">kotlin和java一样是基于jvm的语言，不一样的是kotlin还可以开发iOS，web等，虽然支持的还尚不成熟，但是是大势所趋，因此kotlin可能是使你走向全栈开发的一条捷径，so开启你的kotlin之旅吧！</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -992,6 +741,10 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -1009,6 +762,18 @@ apply plugin: &#39;kotlin-android-extensions&#39;</code></p>
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://binioter.com/2017/11/25/kotlin-vs-java/';
+          this.page.identifier = '2017/11/25/kotlin-vs-java/';
+          this.page.title = 'kotlin-vs-java';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
